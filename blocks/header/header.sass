@@ -1,0 +1,148 @@
+.header 
+  position: fixed
+  z-index: 9999
+  width: 100%
+  &__wrap
+    min-height: 127px
+    background-color: rgba(0,0,0,0.7)
+    padding: 0
+  &__contact-wrap
+    height: 34px
+    width: 100%
+    background-color: #ffffff 
+    @media #{$_xs}
+      height: 70px
+  &__contact-container
+    +container()
+    @media #{$_xs}
+      flex-wrap: nowrap
+  &__contact__info
+    padding: 7px 0 14px 0
+    font-family: $main-font
+    font-size: 15px
+    text-align: left
+    color: #2b2b2b
+    @media #{$_xs}
+      font-size: 12px
+      padding: 0
+      display: flex
+      justify-content: center
+      align-items: center
+    span
+      margin-right: 37px
+      @media #{$_xs}
+        margin-right: 10px
+        &:last-child
+          margin-right: 0
+      &:before
+        font-weight: 700
+        font-size: 18px
+        padding: 0 7px 0 0
+        color: $orange-brown
+  &__contact__social
+    color: $orange-brown
+    padding: 7px 0 9px 0
+    @media #{$_md}
+      display: none
+    span
+      padding: 0 4px
+      &:last-child
+        padding: 0 0 0 8px
+
+  &__logo-nav-container  
+    +container(flex-end, nowrap)   
+    min-height: 92px
+    padding: 0
+    @media #{$_xs}
+      min-height: 30px
+  &__logo
+    width: 339px
+    height: 339px
+    margin-top: -200px
+    background-color: $orange-brown
+    position: relative
+    z-index: 9999
+    transform: rotate(45deg)
+    @media #{$_md}
+      width: 180px
+      height: 180px
+      margin-top: -90px
+    @media #{$_xs}
+      width: 90px
+      height: 70px
+      transform: none
+      margin-top: 0
+    img
+      overflow: auto
+      margin: auto
+      position: absolute
+      top: 140px
+      left: 120px
+      bottom: 0
+      right: 0
+      transform: rotate(-45deg)
+      @media #{$_md}
+        width: 60%
+        height: auto
+        top: 65px
+        left: 48px
+      @media #{$_xs}
+        width: 90%
+        height: auto
+        top: 0px
+        left: 0px
+        transform: none
+.header-nav
+  +container(flex-end, nowrap)
+  align-items: center
+  position: relative
+  &__responsive 
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    @media #{$_xs}
+      align-items: flex-start
+    .header-nav__item
+      display: block
+      a
+        display: block
+        text-align: center
+        padding: 20px 0
+        &:first-child
+          padding: 30px 0 20px 0
+  &__item
+    display: inline-block
+    margin-right: 40px
+    letter-spacing: 1px
+    font-family: $alt-font
+    padding: 1.4px 1.2px
+    @media #{$_md}
+      a
+        display: none
+  &__button
+    color: $orange-brown !important 
+    padding: 14px 25px 12px 25px !important    
+    font-size: 17px !important 
+    font-family: $alt-font !important 
+    @media #{$_md}
+      margin-right: 70px
+      position: absolute
+      top: 0
+      right: 0
+      margin: 25px 70px 0 0
+    @media #{$_xs}
+      padding: 10px 12px 8px 12px !important
+      font-size: 14px !important 
+      margin: 12px 70px 0 0
+    &:hover 
+      background-color: #fff
+  .icon
+    display: none
+    @media #{$_md}
+      font-size: 28px
+      float: right
+      display: block
+      position: absolute
+      text-decoration: none !important
+      top: 20px
+      right: 15px

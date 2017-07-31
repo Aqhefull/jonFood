@@ -1,0 +1,42 @@
+.title
+    min-height: 799px
+    width: 100%
+    background-image: url(../img/title/title.png)
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center
+    position: relative
+    margin: 34px 0 0 0
+    &__overlay
+       +overlay()
+    &__container
+        +container(center)
+        flex-direction: column
+        height: 100%
+        +col(6)
+        @media #{$lgx}
+            +col(10)
+
+        h1
+            font-family: $pacifico-font
+            font-size: 106.4px
+            text-align: center
+            color: #ffffff
+            text-shadow: -1.5px 2.6px 7px #000000
+            margin: 50px 0 13px 18px
+            padding: 0 0 46px 0
+            @media #{$_sm}
+                margin: 0
+        h2
+            font-family: TimesNewRomanPSMT
+            font-size: 25px
+            text-align: center
+            color: #ffffff
+            line-height: 1.2
+            padding: 0 0 28px 0
+    &__button
+        display: flex
+        justify-content: center
+        align-items: center
+        button
+            padding: 10px 37px !important

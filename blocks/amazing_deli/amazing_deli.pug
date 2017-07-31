@@ -1,0 +1,44 @@
+mixin amazing_deli(data)
+    +b.SECTION.amazing_deli#amazing
+        +e.DIV.overlay
+            +e.DIV.container 
+                +e.DIV.title
+                    h3 Amazing
+                    h4 Delicious
+                +e.DIV.right-image
+                    img(src="./img/amazing/amazing_img_plate.png")
+                +e.DIV.image2
+                    img(src="./img/about/about_img2.png")
+                +e.DIV.content
+                    +e.DIV.image
+                        img(src="./img/amazing/amazing_img1.png")
+                    +e.DIV.info(style="margin-left: -93px;")
+                        h3 Drinks
+                        each item in data.items
+                            +e.DIV.info-item
+                                img(src=item.img)
+                                span=item.name
+                                span(style="font-weight: 700")=item.price
+                +e.DIV.content
+                    +e.DIV.info(style="margin-right: -93px;")
+                        h3 Main course 
+                        each item in data.items
+                            +e.DIV.info-item
+                                img(src=item.img)
+                                span=item.name
+                                span(style="font-weight: 700")=item.price
+                    +e.DIV.image
+                        img(src="./img/amazing/amazing_img2.png")
+                +e.DIV.content
+                    +e.DIV.image
+                        img(src="./img/amazing/amazing_img3.png")
+                    +e.DIV.info(style="margin-left: -93px;")
+                        h3 Desserts
+                        each item in data.items
+                            +e.DIV.info-item
+                                img(src=item.img)
+                                span=item.name
+                                span(style="font-weight: 700")=item.price
+                
+                
+

@@ -1,0 +1,15 @@
+mixin about(data)
+    +b.SECTION.about#about
+        +e.DIV.container
+            +e.DIV.image
+                img(src="./img/about/about_img.png")
+            +e.DIV.content
+                each item in data.items
+                    h3 About Us
+                    h4=item.title
+                    p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys 
+                    p standard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesettingdard dummy text ever since the 1500s,when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting
+                    +e.DIV.button
+                        button(class="btn btn-brown")=item.button
+        +e.DIV.image2
+            img(src="./img/about/about_img2.png")

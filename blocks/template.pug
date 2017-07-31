@@ -1,0 +1,72 @@
+include _assets/bemto/bemto
+- set_bemto_settings({ modifier: "--" })
+
+include head/head
+include header/header
+include title/title
+include about/about
+include special_recipes/special_recipes
+include delightful_exp/delightful_exp
+include amazing_deli/amazing_deli
+include mobile_app/mobile_app
+include footer/footer
+
+
+
+doctype html
+html(lang="ru")
+	
+	block head
+		head
+			+head({
+				"title": "Gulp Pack",
+				"author": "Alexandr Komarevich",
+				"description": "Personal Gulp"
+			})
+			
+		+b.BODY.page
+			block header
+						+header({
+							"items": [
+								{
+									"href": '#home',
+									"title": "Home"
+								},
+								{
+									"href": '#about',
+									"title": "About"
+								},
+								{
+									"href": '#special',
+									"title": "Special"
+								},
+								{
+									"href": '#delightful',
+									"title": "Delightful"
+								},
+								{
+									"href": '#amazing',
+									"title": "Amazing"
+								},
+								{
+									"href": '#app',
+									"title": "App"
+								}
+							]
+						})
+			+e.DIV.wrap
+				
+				block content
+					div content
+				block footer
+					+footer()
+				
+			block vendors
+				// build:js js/vendor.js
+				script( src="libs/jquery/dist/jquery.min.js")
+				script( src="libs/wow/dist/wow.min.js")
+				// endbuild
+			block scripts
+				// build:js js/main.js
+				script( src="js/main.js")
+				// endbuild

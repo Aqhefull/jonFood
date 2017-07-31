@@ -1,0 +1,9 @@
+mixin title(data)
+    +b.SECTION.title#home
+        +e.DIV.overlay
+            +e.DIV.container
+                each item in data.items
+                    h1=item.title
+                    h2=item.subtitle
+                    +e.DIV.button
+                        button(class="btn")=item.button

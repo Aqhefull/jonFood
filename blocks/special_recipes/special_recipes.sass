@@ -1,0 +1,56 @@
+.special_recipes
+    min-height: 980px
+    width: 100%
+    background-image: url(../img/special_recipes/sprep.png)
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center
+    position: relative
+    &__overlay
+        +overlay()
+        @media #{$_sm}
+            position: relative
+    &__container
+        +container(center, nowrap)
+        align-items: center
+        height: 100%
+        @media #{$_sm}
+            flex-wrap: wrap
+            padding: 20px 0
+    &__left-image
+        position: absolute
+        left: 0
+        bottom: 0
+        z-index: 105
+        img
+            width: 13vw
+            height: 22vw
+            margin-left: -2.5vw
+            margin-bottom: -12vw
+            max-width: 283px
+            max-height: 490px
+    &__content
+        background-image: url(../img/special_recipes/sprep_text.png)
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: center
+        padding: 49px 55px 53px 41px
+        +col(4)
+        z-index: 206
+        @media #{$_sm}
+            +col(12)
+            margin: 0 0 20px 0
+        p
+            color: #4a4a4a
+            font-size: 15px
+            font-family: $times-font
+            padding: 0 0 28px 0
+            line-height: 1.5
+    &__image
+        position: relative
+        left: -33px
+        @media #{$_sm}
+            left: 0
+        img
+            width: 100%
+            height: auto

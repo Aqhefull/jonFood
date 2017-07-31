@@ -1,0 +1,27 @@
+mixin header(data)
+  +b.SECTION.header
+      +e.DIV.wrap
+        +e.DIV.contact-wrap
+          +e.DIV.contact-container
+            +e.DIV.logo
+              img(src="./img/logo/logo.png")
+            +e.DIV.contact__info
+              span(class="mdi mdi-clock")  Order Foods 24/7 
+              span(class="mdi mdi-phone")  061 9876 5432
+            +e.DIV.contact__social
+              span(class="mdi mdi-facebook")
+              span(class="mdi mdi-google-plus-box")
+              span(class="mdi mdi-twitter")
+              span(class="mdi mdi-linkedin")
+              span(class="mdi mdi-pinterest")
+              span(class="mdi mdi-youtube-play") 
+              span(class="mdi mdi-telegram")
+              span(class="mdi mdi-instagram")
+        +e.DIV.logo-nav-container 
+          +b.DIV.header-nav#header_nav
+            each item in data.items
+              +e.DIV.item
+                a(href=item.href)= item.title
+            +e.DIV.button(class="btn") Table Booking
+            a(href="javascript:void(0);" class="icon" onclick="myFunction()") &#9776
+
