@@ -205,7 +205,7 @@ a {
     background-color: #ffffff; }
     @media (max-width: 480px) {
       .header__contact-wrap {
-        height: 70px; } }
+        height: 100%; } }
   .header__contact-container {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
@@ -216,9 +216,19 @@ a {
             flex-wrap: wrap; }
     @media (max-width: 480px) {
       .header__contact-container {
-        -webkit-flex-wrap: nowrap;
-            -ms-flex-wrap: nowrap;
-                flex-wrap: nowrap; } }
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center; } }
   .header__contact__info {
     padding: 7px 0 14px 0;
     font-family: "OpenSans", Helvetica, sans-serif;
@@ -228,31 +238,34 @@ a {
     @media (max-width: 480px) {
       .header__contact__info {
         font-size: 12px;
-        padding: 0;
+        margin: -30px 0 0 0;
         display: -webkit-box;
         display: -webkit-flex;
         display: -ms-flexbox;
         display: flex;
-        -webkit-box-pack: center;
-        -webkit-justify-content: center;
-            -ms-flex-pack: center;
-                justify-content: center;
-        -webkit-box-align: center;
-        -webkit-align-items: center;
-            -ms-flex-align: center;
-                align-items: center; } }
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        -webkit-box-align: space-between;
+        -webkit-align-items: space-between;
+            -ms-flex-align: space-between;
+                align-items: space-between;
+        width: 100%; } }
     .header__contact__info span {
       margin-right: 37px; }
       @media (max-width: 480px) {
         .header__contact__info span {
-          margin-right: 10px; }
-          .header__contact__info span:last-child {
-            margin-right: 0; } }
+          margin-right: 0; } }
       .header__contact__info span:before {
         font-weight: 700;
         font-size: 18px;
         padding: 0 7px 0 0;
         color: #e7a331; }
+        @media (max-width: 480px) {
+          .header__contact__info span:before {
+            display: block;
+            text-align: center; } }
   .header__contact__social {
     color: #e7a331;
     padding: 7px 0 9px 0; }
@@ -293,12 +306,12 @@ a {
         margin-top: -90px; } }
     @media (max-width: 480px) {
       .header__logo {
-        width: 90px;
-        height: 70px;
-        -webkit-transform: none;
-            -ms-transform: none;
-                transform: none;
-        margin-top: 0; } }
+        width: 100px;
+        height: 100px;
+        margin-top: -50px;
+        -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+                transform: rotate(45deg); } }
     .header__logo img {
       overflow: auto;
       margin: auto;
@@ -318,13 +331,13 @@ a {
           left: 48px; } }
       @media (max-width: 480px) {
         .header__logo img {
-          width: 90%;
+          width: 60%;
           height: auto;
-          top: 0px;
-          left: 0px;
-          -webkit-transform: none;
-              -ms-transform: none;
-                  transform: none; } }
+          top: 35px;
+          left: 25px;
+          -webkit-transform: rotate(-45deg);
+              -ms-transform: rotate(-45deg);
+                  transform: rotate(-45deg); } }
 
 .header-nav {
   -webkit-box-pack: end;
@@ -452,6 +465,9 @@ a {
       @media (max-width: 768px) {
         .title__container h1 {
           margin: 0; } }
+      @media (max-width: 480px) {
+        .title__container h1 {
+          font-size: 72px; } }
     .title__container h2 {
       font-family: TimesNewRomanPSMT;
       font-size: 25px;
@@ -459,6 +475,9 @@ a {
       color: #ffffff;
       line-height: 1.2;
       padding: 0 0 28px 0; }
+      @media (max-width: 480px) {
+        .title__container h2 {
+          font-size: 18px; } }
   .title__button {
     display: -webkit-box;
     display: -webkit-flex;
@@ -504,6 +523,9 @@ a {
         -webkit-flex-wrap: wrap;
             -ms-flex-wrap: wrap;
                 flex-wrap: wrap; } }
+    @media (max-width: 480px) {
+      .about__container {
+        padding: 60px 0 60px 0; } }
     .about__container p {
       color: #4a4a4a;
       font-size: 15px;
@@ -650,9 +672,16 @@ a {
     z-index: 209; }
     @media (max-width: 768px) {
       .delightful_exp__gallery {
-        -webkit-justify-content: space-around;
-            -ms-flex-pack: distribute;
-                justify-content: space-around; } }
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        -webkit-box-align: space-between;
+        -webkit-align-items: space-between;
+            -ms-flex-align: space-between;
+                align-items: space-between; }
+        .delightful_exp__gallery:last-child {
+          margin: 0 0 60px 0; } }
     .delightful_exp__gallery img {
       display: block;
       width: 100%;
@@ -827,6 +856,20 @@ a {
           -webkit-flex-wrap: wrap;
               -ms-flex-wrap: wrap;
                   flex-wrap: wrap; } }
+      @media (max-width: 480px) {
+        .amazing_deli__info-item {
+          -webkit-box-align: stretch;
+          -webkit-align-items: stretch;
+              -ms-flex-align: stretch;
+                  align-items: stretch; } }
+      .amazing_deli__info-item--separator {
+        max-width: 100%;
+        width: 300px;
+        border-bottom: 1px dotted #000;
+        margin-bottom: -18px; }
+        @media (max-width: 480px) {
+          .amazing_deli__info-item--separator {
+            margin-bottom: 0; } }
       .amazing_deli__info-item span {
         font-family: "TimesNewRoman", Helvetica, sans-serif;
         font-size: 18px; }

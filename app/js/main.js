@@ -1,5 +1,4 @@
 new WOW().init();
-$('.title__container').addClass('slideInDown wow');
 $('.about__image').addClass('slideInUp wow');
 $('.about__content').addClass('slideInUp wow');
 $('.special_recipes__content').addClass('slideInLeft wow');
@@ -27,7 +26,7 @@ $(document).ready(function () {
         $target = $(target);
         if ($(window).width() < 768) {
             $('html, body').stop().animate({
-                'scrollTop': $target.offset().top - $("header").height()
+                'scrollTop': $target.offset().top - $(".header__contact-wrap").height()
             }, 900, 'swing', function () {
                 window.location.hash = target;
             });

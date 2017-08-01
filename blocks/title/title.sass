@@ -8,7 +8,7 @@
     position: relative
     margin: 34px 0 0 0
     &__overlay
-       +overlay()
+      +overlay()
     &__container
         +container(center)
         flex-direction: column
@@ -16,7 +16,6 @@
         +col(6)
         @media #{$lgx}
             +col(10)
-
         h1
             font-family: $pacifico-font
             font-size: 106.4px
@@ -27,6 +26,8 @@
             padding: 0 0 46px 0
             @media #{$_sm}
                 margin: 0
+            @media #{$_xs}
+              font-size: 72px
         h2
             font-family: TimesNewRomanPSMT
             font-size: 25px
@@ -34,6 +35,9 @@
             color: #ffffff
             line-height: 1.2
             padding: 0 0 28px 0
+            @media #{$_xs}
+              font-size: 18px
+
     &__button
         display: flex
         justify-content: center

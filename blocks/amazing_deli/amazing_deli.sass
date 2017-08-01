@@ -73,6 +73,16 @@
             align-items: center
             @media #{$_sm}
                 flex-wrap: wrap
+            @media #{$_xs}
+                align-items: stretch
+            &--separator
+              max-width: 100%
+              width: 300px
+              border-bottom: 1px dotted #000
+              margin-bottom: -18px
+              @media #{$_xs}
+                margin-bottom: 0
+
             span
                 font-family: $times-font
                 font-size: 18px

@@ -24,7 +24,10 @@
         position: relative
         z-index: 209
         @media #{$_sm}
-            justify-content: space-around
+            justify-content: space-between
+            align-items: space-between
+            &:last-child
+              margin: 0 0 60px 0
         img
             display: block
             width: 100%
